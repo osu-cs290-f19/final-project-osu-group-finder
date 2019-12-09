@@ -1,0 +1,22 @@
+{
+  "name": "osu-group-finder",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/osu-cs290-f19/final-project-osu-group-finder.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/osu-cs290-f19/final-project-osu-group-finder/issues"
+  },
+  "homepage": "https://github.com/osu-cs290-f19/final-project-osu-group-finder#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
