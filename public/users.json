@@ -1,5 +1,14 @@
 {
-    "user1": ["1", "4"],
-    "user2": ["2"],
-    "user3": ["3"]
+    "user1": {
+        "posts": [1],
+        "name": "Jacob"
+    },
+    "user2": {
+        "posts": [2],
+        "name": "Eric"
+    },
+    "user3": {
+        "posts": [],
+        "name": "Robert"
+    }
 }
