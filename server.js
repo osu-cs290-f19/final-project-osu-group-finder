@@ -4,8 +4,8 @@ var app = express();
 var port = process.env.PORT || 3000;
 
 //// needs to be replaced with an actual database
-var posts = require("public/posts.json");
-var users = require("public/users.json");
+var posts = require("./public/posts.json");
+var users = require("./public/users.json");
 ////
 
 app.engine('handlebars', exphbs());
