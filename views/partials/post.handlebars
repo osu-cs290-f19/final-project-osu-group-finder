@@ -1,0 +1,10 @@
+<li class="post" style="margin-bottom: 30px">
+    {{this.title}} 
+    {{this.class}} 
+    {{this.position}}<br/>
+    {{this.desc}}<br/>
+    {{this.location}} 
+    {{#if this.meetingTime}}
+        {{formatDate this.meetingTime}} 
+    {{/if}}
+</li>
