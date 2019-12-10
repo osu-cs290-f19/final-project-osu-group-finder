@@ -1,17 +1,44 @@
-{
-    "2" : {
+[
+    {
+        "_id" : "4",
+        "title" : "Hosting a Group Study Session",
+        "class" : "CS 121",
+        "position" : "TA",
+        "author" : "User2",
+        "desc" : "If anyone is interested, I'm hosting a study session for our final. We will cover all of the topics on the final as well as do review assignments and read over previous exames.",
+        "timePosted" : 1575965120,
+        "meetingTime" : 1575965124,
+        "location" : "KEC 108",
+        "attending" : []
+    },
+
+    {
+        "_id" : "3",
+        "title" : "Looking for 3 Group Members",
+        "class" : "CS 290",
+        "position" : "Student",
+        "author" : "User1",
+        "desc" : "I'm looking for 3 other people to join my group for the final project. I'm thinking about making a budget planner.",
+        "timePosted" : 1575965107,
+        "meetingTime" : 1575965114,
+        "location" : "",
+        "attending" : []
+    },
+    {
+        "_id" : "2",
         "title" : "Hosting a Group Study Session",
         "class" : "CS 121",
         "position" : "TA",
         "author" : "User2",
         "desc" : "If anyone is interested, I'm hosting a study session for our final. We will cover all of the topics on the final as well as do review assignments and read over previous exames.",
         "timePosted" : 1575831401,
-        "meetingTime" : 1575907200,
+        "meetingTime" : 1575831421,
         "location" : "KEC 108",
         "attending" : []
     },
 
-    "1": {
+    {
+        "_id" : "1",
         "title" : "Looking for 3 Group Members",
         "class" : "CS 290",
         "position" : "Student",
@@ -22,5 +49,4 @@
         "location" : "",
         "attending" : []
     }
-}
-
+]
