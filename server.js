@@ -27,9 +27,24 @@ app.get('/posts/:post', function (req, res) {
   }
 });
 
-app.get('*', function (req, res) {
-  // res.status(404).render('404')
-  res.status(404).sendFile(__dirname + "/public/404.html");
+app.post('/user', function (req, res) {
+  res.status(200).send("User Added")
+});
+
+app.post('/user', function (req, res) {
+  res.status(200).send("Post Created")
+});
+
+app.delete("/user", function (req, res) {
+  res.status(200).send("Deleted User")
+});
+
+app.delete("/post", function (req, res) {
+  res.status(200).send("Deleted Post")
+});
+
+app.get("*", function (req, res) {
+  res.status(404).render('404')
 });
 
 app.listen(port, function () {
