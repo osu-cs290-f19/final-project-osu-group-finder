@@ -2,9 +2,12 @@
   "name": "osu-group-finder",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "npm run build",
+    "prestart": "npm run build",
+    "start": "node server.js",
+    "build": "handlebars views/partials/post.handlebars -f public/post.js"
   },
   "repository": {
     "type": "git",
