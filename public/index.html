@@ -24,13 +24,6 @@
         <h2>Filters</h2>
 
         <div class="filter-input-container">
-          <label for="filter-text" class="filter-input-label">Text</label>
-          <div class="filter-input-element">
-            <input type="text" name="filter-text" id="filter-text" class="filter-input">
-          </div>
-        </div>
-
-        <div class="filter-input-container">
           <label for="filter-location">Location</label>
           <div class="filter-input-element">
             <select id="filter-Location" class="filter-input" name="filter-Location">
@@ -44,16 +37,16 @@
                 
             <section id="filter">
                 <div class="filter-input-container">
-          <fieldset id="filter-condition" class="filter-fieldset">
-            <legend>Condition</legend>
+          <fieldset id="filter-group" class="filter-fieldset">
+            <legend>Group</legend>
               
             <div>
-              <input type="checkbox" name="filter-condition" id="filter-condition-Study-Session" value="Study-Session">
-              <label for="filter-condition-Study-Session ">Study Session</label>
+              <input type="checkbox" name="filter-group" id="filter-group-Study-Session" value="Study-Session">
+              <label for="filter-group-Study-Session ">Study Session</label>
             </div>
             <div>
-              <input type="checkbox" name="filter-condition" id="filter-condition-Project" value="Project">
-              <label for="filter-condition-Project">Project</label>
+              <input type="checkbox" name="filter-group" id="filter-group-Project" value="Project">
+              <label for="filter-group-Project">Project</label>
             </div>
             <div>
           
@@ -61,16 +54,70 @@
         </div>
 
         <button id="filter-update-button" class="action-button">Update</button>
-
-                <div>
-                    <label for="class"></label>
-                    <input type="text" name="class">
-                </div>
-            </section>
-            <section id="posts">
+          </aside>
+                
+            
+                <div class="post" data-location="Corvallis" data-group="Project">
+                    <div class=post-contents">
+                       <div class="post-decription-container">
+                           
+                       </div>
+                        <div> class="post-info-container">
+                          <span class="post-Location">(Corvallis)</span> <span class="post-Building">KEC 1003</span> <span class="post-Group">Project</span>
+                         </div>
+                        </div>
+                       </div>
+                                                                                                                                             
+                        
+                <div class="post" data-location="Bend" data-group="Study Session">
+                    <div class=post-contents">
+                       <div class="post-decription-container">
+                           
+                       </div>
+                        <div> class="post-info-container">
+                          <span class="post-Location">(Bend)</span> <span class="post-Building">Library</span> <span class="post-Group">Study Session</span>
+                         </div>
+                        </div>
+                       </div>
+                
+                
+                <div class="post" data-location="Online/Discord" data-group="Project">
+                    <div class=post-contents">
+                       <div class="post-decription-container">
+                           
+                       </div>
+                        <div> class="post-info-container">
+                          <span class="post-Location">(Online/Discord)</span> <span class="post-Building">Canada #1003</span> <span class="post-Group">Project</span>
+                         </div>
+                        </div>
+                       </div>
+                   
+                <div class="post" data-location="Corvallis" data-group="Study Session">
+                    <div class=post-contents">
+                       <div class="post-decription-container">
+                           
+                       </div>
+                        <div> class="post-info-container">
+                          <span class="post-Location">(Corvallis)</span> <span class="post-Building">Library</span> <span class="post-Group">Study Session</span>
+                         </div>
+                        </div>
+                       </div>                                                                                                                      
+                                                                                                                                             
 
             </section>
         </main>
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
             
                 
              <button type="button" id="Create-Post"><i class="fas fa-plus"></i></button>
@@ -87,31 +134,30 @@
                 <div class="modal-body">
 
                 <div class="post-input-element">
-                    <label for="post-text-input">Item description</label>
+                    <label for="post-text-input">Post description</label>
                     <input type="text" id="post-text-input"></input>
-                </div>
-
-
-                <div class="post-input-element">
-                    <label for="post-price-input">Selling price ($)</label>
-                    <input type="number" id="post-price-input">
                 </div>
 
                 <div class="post-input-element">
                     <label for="post-Location-input">Location</label>
                     <input type="text" id="post-Location-input">
                 </div>
+                
+                <div class="post-input-element">
+                    <label for="post-building-input">Building ($)</label>
+                    <input type="text" id="post-building-input">
+                </div>
 
           <div class="post-input-element">
-            <fieldset id="post-condition-fieldset" class="post-fieldset">
-              <legend>Condition</legend>
+            <fieldset id="post-group-fieldset" class="post-fieldset">
+              <legend>Group</legend>
               <div>
-                <input type="radio" name="post-condition" id="post-condition-Study-Session" value="Study-Session" checked>
-                <label for="post-condition-Study-Session">Study Session</label>
+                <input type="radio" name="post-group" id="post-group-Study-Session" value="Study-Session" checked>
+                <label for="post-group-Study-Session">Study Session</label>
               </div>
               <div>
-                <input type="radio" name="post-condition" id="post-condition-Project" value="Project">
-                <label for="post-condition-Project">Project</label>
+                <input type="radio" name="post-group" id="post-group-Project" value="Project">
+                <label for="post-groupn-Project">Project</label>
               </div>
               
                 
