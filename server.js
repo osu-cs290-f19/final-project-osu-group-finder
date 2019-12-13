@@ -5,7 +5,7 @@ const BodyParser = require("body-parser");
 const MongoClient = require('mongodb').MongoClient;
 const port = process.env.PORT || 3000;
 
-const DB_URL = "mongodb+srv://<username>:<password>@cluster0-z3fba.mongodb.net/test?retryWrites=true&w=majority";
+const DB_URL = "mongodb+srv://dbAdmin:dbVilevac@cluster0-z3fba.mongodb.net/test?retryWrites=true&w=majority";
 const DATABASE_NAME = "database0";
 var database, userCOLL, postCOLL;
 
