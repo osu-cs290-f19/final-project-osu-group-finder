@@ -1,9 +1,118 @@
-<main>
-    <section id="posts">
-        <ul style="list-style:none">
+<header>
+    <h1 class="site-title"><a href="#">OSU Group Finder</a></h1>
+</header>
+
+<main class="content">
+    <aside class="filter-container">
+
+        <h2>Filters</h2>
+
+        <div class="filter-input-container">
+            <label for="filter-text" class="filter-input-label">Text</label>
+            <div class="filter-input-element">
+                <input type="text" name="filter-text" id="filter-text" class="filter-input">
+            </div>
+        </div>
+
+        <div class="filter-input-container">
+            <label for="filter-location">Location</label>
+            <div class="filter-input-element">
+                <select id="filter-Location" class="filter-input" name="filter-Location">
+                    <option selected value="">Any</option>
+                    <option>Corvallis</option>
+                    <option>Online/Discord</option>
+                    <option>Bend</option>
+                </select>
+            </div>
+        </div>
+
+        <section id="filter">
+            <div class="filter-input-container">
+                <fieldset id="filter-condition" class="filter-fieldset">
+                    <legend>Group Type</legend>
+
+                    <div>
+                        <input type="checkbox" name="filter-condition" id="filter-condition-Study-Session" value="Study-Session">
+                        <label for="filter-condition-Study-Session ">Study Session</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" name="filter-condition" id="filter-condition-Project" value="Project">
+                        <label for="filter-condition-Project">Project</label>
+                    </div>
+                    <div>
+
+                </fieldset>
+                </div>
+
+                <button id="filter-update-button" class="action-button">Update</button>
+
+                <div>
+                    <label for="class"></label>
+                    <input type="text" name="class">
+                </div>
+
+        </section>
+    </aside>
+    <section class='posts'>
         {{#each posts}}
             {{> post}}
         {{/each}}
-        </ul>
     </section>
 </main>
+
+<button type="button" id="Create-Post"><i class="fas fa-plus"></i> Create Post</button>
+
+<div id="modal-backdrop" class="hidden"></div>
+
+<div id="Create-Post" class="hidden">
+    <div class="modal-dialog">
+
+        <div class="modal-header">
+            <h3>Create Post On OSU Group Finder</h3>
+            <button type="button" id="modal-close" class="modal-hide-button">&times;</button>
+        </div>
+
+        <div class="modal-body">
+
+            <div class="post-input-element">
+                <label for="post-text-input">Item description</label>
+                <input type="text" id="post-text-input"></input>
+            </div>
+
+            <div class="post-input-element">
+                <label for="post-price-input">Selling price ($)</label>
+                <input type="number" id="post-price-input">
+            </div>
+
+            <div class="post-input-element">
+                <label for="post-Location-input">Location</label>
+                <input type="text" id="post-Location-input">
+            </div>
+
+            <div class="post-input-element">
+                <fieldset id="post-condition-fieldset" class="post-fieldset">
+                    <legend>Group Type</legend>
+                    <div>
+                        <input type="radio" name="post-condition" id="post-condition-Study-Session" value="Study-Session" checked>
+                        <label for="post-condition-Study-Session">Study Session</label>
+                    </div>
+                    <div>
+                        <input type="radio" name="post-condition" id="post-condition-Project" value="Project">
+                        <label for="post-condition-Project">Project</label>
+                    </div>
+
+                </fieldset>
+            </div>
+
+        </div>
+
+        <div class="modal-footer">
+            <button type="button" id="modal-cancel" class="modal-hide-button action-button">Cancel</button>
+            <button type="button" id="modal-accept" class="action-button">Create Post</button>
+        </div>
+    </div>
+</div>
+            
+<script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.5.3/handlebars.runtime.js" integrity="sha256-a3Ce5AptrbDIlSxBWL+kp04XfueZcNTbYmRV7a9mhEo=" crossorigin="anonymous"></script>
+<script src="/post.js"></script>
+<script src="/index.js"></script>

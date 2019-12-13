@@ -17,18 +17,13 @@ var hbs = exphbs.create({
         formatDate: function(timestamp) {
             var date = new Date(timestamp * 1000);
 
-            var monthNames = [
-                "Jan", "Feb", "Mar",
-                "Apr", "May", "June", "July",
-                "Aug", "Sept", "Oct",
-                "Nov", "Dec"
-              ];
+            var monthNames = [ "Jan", "Feb", "Mar", "Apr", "May", "June", "July", "Aug", "Sept", "Oct", "Nov", "Dec" ];
             
-              var day = date.getDate();
-              var monthIndex = date.getMonth();
-              var year = date.getFullYear();
-            
-              return monthNames[monthIndex] + " " + day;
+            var day = date.getDate();
+            var monthIndex = date.getMonth();
+            var year = date.getFullYear();
+        
+            return monthNames[monthIndex] + " " + day;
         }
     }
 });
@@ -52,7 +47,7 @@ app.get('/', function (req, res) {
 app.get('/posts/:postId', function (req, res) {
     var postID = req.params.postId;
     postCOLL.find({_id : postID}).toArray((error, result) => {
-        console.log("sending posts id " + postID)
+        console.log("sending posts id " + postID);
         res.status(200).render('body', {posts: result});
     });
 });
@@ -62,7 +57,7 @@ app.post('/addPost', function (req, res) {
         if(error) {
             return res.status(500).send(error);
         }
-        res.status(200)
+        res.status(200);
     });
 });
 
@@ -77,18 +72,18 @@ app.delete("/posts/:postId", function (req, res) {
 });
 
 app.get('/users/:user', function (req, res) {
-    res.status(200).send("User Added")
+    res.status(200).send("User Added");
 });
 
 app.post('/addUser', function (req, res) {
-    res.status(200).send("User Added")
+    res.status(200).send("User Added");
 });
 
 app.delete("/delUser/:username", function (req, res) {
-    var user = req.body
+    var user = req.body;
     userCOLL.deleteOne(
-        { username: user.username, posts: user.posts, name: user.name } // specifies the document to delete
-    )
+        { username: user.username } // specifies the document to delete
+    );
 });
 
 app.get('*', function (req, res) {
